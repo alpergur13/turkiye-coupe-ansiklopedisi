@@ -1,0 +1,458 @@
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: #333;
+    color: white;
+    width: 100%;  /* Header genişliğini %100 yapalım */
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+}
+
+header nav a {
+    color: white;
+    margin: 0 6px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Search bar için flex düzeni */
+header .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Arama çubuğu ile buton arasındaki boşluk */
+}
+
+header .search-bar input {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px; /* Arama kutusunun genişliğini belirleyin */
+}
+
+header .search-bar button {
+    position: relative;
+    bottom: 10px;
+    padding: 8px 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+header .search-bar button:hover {
+    background-color: #0056b3;
+}
+
+main {
+    padding: 30px;
+}
+
+/* Başlık ve Araba Listeleri */
+main h1, main h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.brand-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.brand {
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+}
+
+.brand:hover {
+    background-color: #f5f5f5;
+}
+
+.brand-icon {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.brand p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Araba kartı (Araba sayfası için) */
+.car-details {
+    display: flex;
+    align-items: flex-start; /* Fotoğraf ve yazıların üst kısımlarını hizalar */
+  }
+  
+  .car-large {
+    max-width: 800px; /* Fotoğraf boyutunu sınırlama */
+    max-height: 450px; /* Fotoğraf boyutunu sınırlama */
+  }
+  
+  .car-info {
+    margin-left: 50px; /* Fotoğraf ile bilgi arasındaki boşluk */
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; /* Bilgileri alt alta dizmek için */
+    justify-content: flex-start;
+  }
+  
+  .car-info p,
+  .car-info ul {
+    margin: 5px 0; /* Yazılar arasındaki boşluk */
+  }
+
+
+/*    popüler cars kısmı   */
+#popular-cars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 sütun yapalım */
+    gap: 20px;  /* Kartlar arasında boşluk */
+    border: 0px;
+    border-radius: 1px;
+    margin-top: 20px;
+    margin-right: 100px;
+}
+
+.popular-cars {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 7x;
+    border-radius: 8px;
+    background-color: white;
+    transition: transform 0.2s, border-color 0.2s;
+    width: 100%;
+}
+
+.popular-cars img {
+    width: 90%;
+    height: 150px;  /* Görselleri daha küçük tutalım */
+    margin-top: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.popular-cars:hover {
+    transform: scale(1.00);
+
+    border-color: #007BFF;
+}
+
+/*    arama kısmı     */
+
+#search-info {
+    display: grid; /* Grid düzenini kullanıyoruz */
+    grid-template-columns: repeat(4, 1fr); /* 4 sütunlu grid */
+    gap: 0px; /* Kartlar arasındaki boşluğu kaldırdık */
+    margin-top: 20px; /* Üstten biraz boşluk */
+    width: 100%; /* Alanın tamamını kullan */
+}
+.search-info .car-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Her satırda 4 kart olacak şekilde düzenleme */
+    gap: 20px;
+    justify-items: center; /* Kartları yatayda ortalar */
+    margin-top: 20px;
+    padding: 0 20px; /* Kapsayıcıya iç padding ekleyelim */
+    box-sizing: border-box; /* Box modelini düzgün ayarlamak için */
+}
+
+
+.search-info .car-card {
+    text-align: center;
+    border: 2px solid #ddd;
+    padding: 7px;/*Kart içi boşluk */
+    border-radius: 8px;
+    transition: transform 0.2s, border-color 0.2s;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px; /* Kartın yüksekliğini tam kullan */
+    margin-bottom: 20px;
+}
+
+.search-info .car-card img {
+    width: 100%; /* Görselin genişliğini kartın genişliğine göre ayarladık */
+    height: 200px; /* Görselin yüksekliğini artırdık */
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+.search-info .car-card:hover {
+    transform: scale(1.00);
+
+    border-color: #007BFF;
+}
+
+.car-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+
+/* Detaylar Sayfası */
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlık stilini güzelleştirelim */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Araba detayları */
+.car-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.car-image {
+    flex: 1; /* Fotoğrafın genişliği alabileceği maksimum alanı belirler */
+    margin-right: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.car-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    font-size: 0.8em;
+}
+
+.car-info .top-info, .car-info .bottom-info {
+    flex: 1; /* Her iki kısmın da eşit uzunlukta olmasını sağlar */
+    margin-bottom: 20px;
+}
+
+.car-info .top-info {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1px;
+}
+
+.car-info .bottom-info {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-top: 1px;
+}
+
+.car-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Bilgiler İçin Çerçeve */
+
+
+/* Yorumlar Bölümü */
+#yorumlar {
+    margin-top: 30px;
+}
+
+.comment {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.comment .author {
+    font-weight: bold;
+    color: #007BFF;
+    margin-top: 5px;
+}
+
+/* Yorum Formu */
+#yorumFormu {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#yorumFormu input[type="text"],
+#yorumFormu textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+}
+
+#yorumFormu button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+#yorumFormu button:hover {
+    background-color: #0056b3;
+}
+
+/* Genel Başlık */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+}
+
+/* Diğer CSS düzenlemeleri */
+
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+}
+.comments-section {
+    margin-top: 20px;
+    border-top: 2px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .comments-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  #comments-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #comments-list li {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .comment-form {
+    margin-top: 15px;
+  }
+  
+  #comment-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .comment-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .comment-form button:hover {
+    background-color: #0056b3;
+  }

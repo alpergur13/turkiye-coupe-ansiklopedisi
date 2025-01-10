@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Araba Detayları - Türkiye Coupe Arabalar Ansiklopedisi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Türkiye Coupe Arabalar Ansiklopedisi</div>
+    <nav>
+      <a href="index.html">Anasayfa</a>
+      <a href="about.html">Hakkında</a>
+      <a href="contact.html">İletişim</a>
+      <a href="brands.html">Markalar</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="search-query" placeholder="Arama Yapın...">
+      <button onclick="searchRedirect()">Ara</button>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main class="main-content">
+    <h1>Araba Detayları</h1>
+    <div class="car-details">
+      <div class="car-image" id="car-image">
+          <!-- Burada araba fotoğrafı görünecek -->
+      </div>
+      <div class="car-info" id="car-info">
+          
+      </div>
+  </div>
+
+    <h1 id="yorum-baslik">Yorumlar</h1>
+
+    <!-- Yorumları Göster -->
+    <div id="yorumlar">
+        <!-- Yorumlar burada dinamik olarak eklenebilir -->
+    </div>
+
+    <!-- Yorum Ekleme Formu -->
+    <form id="yorumFormu">
+        <input type="hidden" name="araba_isim" id="araba_isim">
+
+        <input type="text" name="isim" placeholder="Adınız" required><br>
+        <textarea name="yorum" placeholder="Yorumunuz" required></textarea><br>
+        <button type="submit">Gönder</button>
+    </form>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Türkiye Coupe Arabalar Ansiklopedisi</p>
+</footer>
+</body>
+</html>

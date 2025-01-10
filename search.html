@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arama Sonuçları - Türkiye Coupe Arabalar Ansiklopedisi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Türkiye Coupe Arabalar Ansiklopedisi</div>
+    <nav>
+      <a href="index.html">Anasayfa</a>
+      <a href="about.html">Hakkında</a>
+      <a href="contact.html">İletişim</a>
+      <a href="brands.html">Markalar</a>
+    </nav>
+    <div class="search-bar">
+        <input type="text" id="search-query" placeholder="Arama Yapın...">
+        <button onclick="searchRedirect()">Ara</button>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <h1>Arama Sonuçları</h1>
+    
+  
+    <!-- Filtreleme Seçenekleri -->
+    <div class="filters">
+      <label for="brand-filter">Marka:</label>
+      <select id="brand-filter">
+          <option value="all">Tümü</option>
+          <option value="renault">Renault</option>
+          <option value="bmw">BMW</option>
+          <option value="audi">Audi</option>
+
+          <!-- Diğer markalar buraya eklenebilir -->
+      </select>
+  
+      <label for="fuel-type-filter">Yakıt Türü:</label>
+      <select id="fuel-type-filter">
+          <option value="all">Tümü</option>
+          <option value="benzin">Benzin</option>
+          <option value="dizel">Dizel</option>
+          <option value="hibrit">Hibrit</option>
+          <!-- Diğer yakıt türleri -->
+      </select>
+  
+      <label for="transmission-filter">Vites:</label>
+      <select id="transmission-filter">
+          <option value="all">Tümü</option>
+          <option value="manuel">Manuel</option>
+          <option value="otomatik">Otomatik</option>
+      </select>
+  
+      <label for="drive-filter">Çekiş:</label>
+      <select id="drive-filter">
+          <option value="all">Tümü</option>
+          <option value="önden çekiş">Önden Çekiş</option>
+          <option value="arkadan çekiş">Arkadan Çekiş</option>
+          <option value="4x4">4x4</option>
+      </select>
+  
+      <label for="sort-by">Sıralama Ölçütü:</label>
+      <select id="sort-by">
+          <option value="name">İsme Göre</option>
+          <option value="year">Yıla Göre</option>
+          <option value="enginePower">Güce Göre</option>
+          <option value="popularity">Popülerliğe Göre</option>
+          <option value="maxSpeed">Hıza Göre</option>
+      </select>
+  
+      <label for="sort-order">Sıralama Düzeni:</label>
+      <select id="sort-order">
+          <option value="asc">Artan (Küçükten Büyüğe)</option>
+          <option value="desc">Azalan (Büyükten Küçüğe)</option>
+      </select>
+  
+      <button onclick="applyFiltersAndSorting()">Filtrele ve Sırala</button>
+      <div id="search-info" class="search-info"></div>
+  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Türkiye Coupe Arabalar Ansiklopedisi</p>
+  </footer>
+</body>
+</html>
