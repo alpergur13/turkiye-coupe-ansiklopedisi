@@ -3,7 +3,7 @@ $servername = "localhost";
 $host = "localhost";
 $dbname = "yorum-sistemi";
 $username = "root"; // Varsayılan kullanıcı adı
-$password = ""; // Varsayılan şifre (genelde boş bırakılır)
+$password = ""; // Varsayılan şifre 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // Hata raporlama
